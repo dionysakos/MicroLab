@@ -42,7 +42,7 @@ delay_10_loop:
     rcall DSEC
     dec delay
     brne delay_10_loop
-    ldi delay, 10
+    ;ldi delay, 10
     ret
 
 delay_5:
@@ -51,7 +51,7 @@ delay_5_loop:
     rcall DSEC
     dec delay2
     brne delay_5_loop
-    ldi delay2, 5
+    ;ldi delay2, 5
     ret
 
 
