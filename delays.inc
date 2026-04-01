@@ -33,8 +33,8 @@ loop_inner:
 
 ; Total cc = 3*C1*C2*C3 + 3*C1*C2 + 3*C1 +16 
 
-ldi delay, 10
-ldi delay2, 5
+;ldi delay, 10
+;ldi delay2, 5
 
 delay_10:
     ldi delay, 10
