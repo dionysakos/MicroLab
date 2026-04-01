@@ -1,0 +1,39 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328PB-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-164,-100" rotation="0" hflip="1" vflip="1" label="mega328PB-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="Users/dionysiskatsetis/microlab/ask1.hex" Auto_Load="false" saveEepr="true" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="false" SerialMon="-1" />
+
+<item itemtype="Led" CircId="Led-3" mainComp="false" Show_id="false" Show_Val="false" Pos="20,-60" rotation="0" hflip="1" vflip="1" label="Led-3" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Led" CircId="Led-4" mainComp="false" Show_id="false" Show_Val="false" Pos="24,-28" rotation="0" hflip="1" vflip="1" label="Led-4" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-5" mainComp="false" Show_id="false" Show_Val="false" Pos="84,-36" rotation="0" hflip="1" vflip="1" label="Ground-5" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-9" mainComp="false" Show_id="false" Show_Val="false" Pos="-164,100" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-9" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="false" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-10" mainComp="false" Show_id="false" Show_Val="false" Pos="-164,72" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-10" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="false" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-11" mainComp="false" Show_id="false" Show_Val="false" Pos="-164,48" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-11" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="false" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-12" mainComp="false" Show_id="false" Show_Val="false" Pos="-164,24" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-12" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="false" />
+
+<item itemtype="Node" CircId="Node-6" mainComp="false" Pos="64,-60" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="mega328PB-2-PORTC0" endpinid="Led-4-lPin" pointList="-68,-76,0,-76,0,-28,8,-28" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Led-4-rPin" endpinid="Node-6-1" pointList="40,-28,64,-28,64,-60" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Led-3-rPin" endpinid="Node-6-0" pointList="36,-60,64,-60" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Node-6-2" endpinid="Ground-5-Gnd" pointList="64,-60,84,-60,84,-52" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Fixed Voltage-12-outnod" endpinid="mega328PB-2-PORTB0" pointList="-148,24,-124,24,-124,-4" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Fixed Voltage-11-outnod" endpinid="mega328PB-2-PORTB1" pointList="-148,48,-116,48,-116,-4" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="Fixed Voltage-10-outnod" endpinid="mega328PB-2-PORTB2" pointList="-148,72,-108,72,-108,-4" />
+
+<item itemtype="Connector" uid="Connector-11" startpinid="Fixed Voltage-9-outnod" endpinid="mega328PB-2-PORTB3" pointList="-148,100,-100,100,-100,-4" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="mega328PB-2-PORTC1" endpinid="Led-3-lPin" pointList="-68,-84,4,-84,4,-60" />
+
+</circuit>
