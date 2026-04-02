@@ -39,7 +39,7 @@ reset:
 wait:
     rcall DSEC
     dec cnt
-    breq idle 
+    breq idle ; 10 sec are passed and s still is 1 so we have to stop moving
     sbis PINB,0 ;if s = 1 we continue to count
     rjmp move ; s=0 so we have to keep moving and reset the timer when s = 1
     rjmp wait ; we continue to count as s = 1
