@@ -1,2 +1,2 @@
 clean:
-	rm -f *.hex *.obj *.cof *.lst *.eep.hex
+	rm -f *.hex *.obj *.cof *.lst *.eep.hex *.elf
