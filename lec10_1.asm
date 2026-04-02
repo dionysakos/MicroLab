@@ -1,4 +1,4 @@
-.include "m328def.inc"
+.include "m328PBdef.inc"
 
 ; linear search
 

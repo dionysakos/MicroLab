@@ -1,4 +1,4 @@
-.include "m328def.inc"
+.include "m328PBdef.inc"
 
 .def cnt = r16
 .equ loc_odd = $0060

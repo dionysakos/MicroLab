@@ -1,4 +1,4 @@
-.include "m328def.inc"
+.include "m328PBdef.inc"
 .include "delays.inc"
 .def temp = r16
 .def walk = r17

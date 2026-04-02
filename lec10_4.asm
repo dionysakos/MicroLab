@@ -1,4 +1,4 @@
-.include "m32def.inc"
+.include "m328PBdef.inc"
 
 .def temp = r20
 
