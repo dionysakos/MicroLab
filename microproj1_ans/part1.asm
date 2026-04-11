@@ -1,3 +1,8 @@
+;
+;Dionysis Katsetis el23005
+;
+; part 1
+
 .include "m16def.inc"
 
 .def temp = r22
@@ -21,8 +26,8 @@ main:
 
     ldi temp, $FF
 loop_a:
-    st x+, temp
-    dec temp
+    st x+, temp 
+    dec temp 
     brne loop_a
     st x, temp
 
@@ -44,7 +49,7 @@ bit_loop:
     brcs next_b
     inc r14 
     brne next_b
-    inc r15
+    inc r15 ; if we get here we got 256 0s, so r14 is overflowed and we need to increment r15
 next_b:
     dec bit_left
     brne bit_loop
@@ -76,7 +81,7 @@ next_c:
 
 done_c:
     ;end of part c 
-    rjmp done_c
+    rjmp done_c ; infinite loop to stop the program from doing anything else
 
 
 ; end of part 1
