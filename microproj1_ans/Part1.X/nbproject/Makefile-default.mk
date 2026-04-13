@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=part1.asm
+SOURCEFILES_QUOTED_IF_SPACED=part3.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/part1.obj
-POSSIBLE_DEPFILES=${OBJECTDIR}/part1.obj.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/part3.obj
+POSSIBLE_DEPFILES=${OBJECTDIR}/part3.obj.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/part1.obj
+OBJECTFILES=${OBJECTDIR}/part3.obj
 
 # Source Files
-SOURCEFILES=part1.asm
+SOURCEFILES=part3.asm
 
 # Pack Options 
 PACK_ASSEMBLER_OPTIONS=-I "${DFP_DIR}/avrasm/inc"  -i m16def.inc
@@ -90,17 +90,17 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/part1.obj: part1.asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/part3.obj: part3.asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/part1.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Part1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/Part1.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/Part1.X.${IMAGE_TYPE}.tmp part1.asm
+	@${RM} ${OBJECTDIR}/part3.obj 
+	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Part1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/Part1.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/Part1.X.${IMAGE_TYPE}.tmp part3.asm
 else
-${OBJECTDIR}/part1.obj: part1.asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/part3.obj: part3.asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/part1.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Part1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/Part1.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/Part1.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/Part1.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/Part1.X.${IMAGE_TYPE}.lss part1.asm
+	@${RM} ${OBJECTDIR}/part3.obj 
+	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Part1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/Part1.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/Part1.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/Part1.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/Part1.X.${IMAGE_TYPE}.lss part3.asm
 endif
 
 # ------------------------------------------------------------------------------------

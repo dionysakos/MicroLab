@@ -17,7 +17,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>part1.asm</itemPath>
+      <itemPath>part3.asm</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -78,6 +78,10 @@
         <property key="W0102_SIM_PERIPH_MISSING" value="report"/>
         <property key="W0106_SIM_PERIPH_PARTIAL_SUPPORT" value="report"/>
       </Simulator>
+      <Tool>
+        <property key="W0102_SIM_PERIPH_MISSING" value="report"/>
+        <property key="W0106_SIM_PERIPH_PARTIAL_SUPPORT" value="report"/>
+      </Tool>
     </conf>
   </confs>
 </configurationDescriptor>

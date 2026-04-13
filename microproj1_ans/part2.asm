@@ -2,7 +2,7 @@
 
 ; Dionysis Katsetis el23005
 
-.include "m328pdef.inc"
+.include "m16def.inc"
 .def temp = r16
 .def help = r17
 .def comp = r18

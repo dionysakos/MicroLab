@@ -10,10 +10,10 @@ void main(void){
         or1 = ((input>>2)|(input>>3)) & 0x01; 
         x2 = ((input>>4)&(input>>5)) & 0x01;
         and3 = ((input>>6)&(input>>7)) & 0x01;
+        //middle level
         x1 = or1 & x0;
         x3 = and3 ^ x2;
         PORTB = (x0<<0)|(x1<<2)|(x2<<4)|(x3<<6);
-    }
+    } 
 }
-
 
