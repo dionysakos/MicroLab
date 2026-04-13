@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=part3.asm
+SOURCEFILES_QUOTED_IF_SPACED=
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/part3.obj
-POSSIBLE_DEPFILES=${OBJECTDIR}/part3.obj.d
+OBJECTFILES_QUOTED_IF_SPACED=
+POSSIBLE_DEPFILES=
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/part3.obj
+OBJECTFILES=
 
 # Source Files
-SOURCEFILES=part3.asm
+SOURCEFILES=
 
 # Pack Options 
 PACK_ASSEMBLER_OPTIONS=-I "${DFP_DIR}/avrasm/inc"  -i m16def.inc
@@ -90,17 +90,7 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/part3.obj: part3.asm  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} ${DISTDIR} 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/part3.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Part1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/Part1.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/Part1.X.${IMAGE_TYPE}.tmp part3.asm
 else
-${OBJECTDIR}/part3.obj: part3.asm  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} ${DISTDIR} 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/part3.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/Part1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/Part1.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/Part1.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/Part1.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/Part1.X.${IMAGE_TYPE}.lss part3.asm
 endif
 
 # ------------------------------------------------------------------------------------
