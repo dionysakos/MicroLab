@@ -31,9 +31,9 @@ read:
     rjmp read
 
 valid: ; we have a valid input in pin A
-    clr cnt ;counter for decades
     cpi temp, $0A ; if less than 10, skip decades
     brlo outp
+    clr cnt ;counter for decades
 decades:
     inc cnt 
     subi temp, 10 
