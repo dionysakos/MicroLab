@@ -20,17 +20,18 @@ reset:
 
     clr cnt
 
+    ; set PC1-PC4 as output and turn them off initally
     ldi temp ,(1<<1)|(1<<2)|(1<<3)|(1<<4)
     out DDRC, temp
-  
     clr temp
     out PORTC, temp
 
+    ; set PD3(INT1) as output for software trap
     ldi  temp, $08
-    out DDRD,  temp
+    out DDRD,  temp 
 
-    ;ldi temp, 0xFF
-    ;out PORTD, temp
+    ldi temp, 0xFF
+    out PORTD, temp
 
     ldi temp, (1<<ISC11)|(0<<ISC10)
     sts EICRA, temp
@@ -44,12 +45,11 @@ main:
     ldi counter, C
     ;software trap
 loop:
-    ldi temp, $FF
-    out PORTD, temp
-    nop
+    
+    sbi PORTD, 3;
     ; create falling edge on PD3
-    ldi temp, $F7
-    out PORTD, temp
+    nop
+    cbi PORTD, 3
 
     mov output, cnt
     lsl output
@@ -58,11 +58,9 @@ loop:
     or temp, output
     out PORTC, temp
 
+
     dec counter
     brne loop
-
-    ;delay of 600ms
-    ;cpu has frequency of 16MHz
 
     rjmp main
 
@@ -73,9 +71,11 @@ int1_handler:
     push temp
     push r24
     push r25
+
     sbic PIND, 0
     inc cnt
     andi cnt, $0F ;keep only the last 4 bits, so it wraps around after 15
+
     ;delay of 600ms
     ;cpu has frequency of 16MHz
     ldi r24, low(16*600)
