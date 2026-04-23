@@ -3,7 +3,7 @@
 #include "util/delay.h"
 #include "avr/interrupt.h"
 
-volatile int counter = 4000; // 4 bytes 
+volatile int counter = 4000; // 2 bytes 
 
 
 ISR(INT0_vect){
