@@ -26,7 +26,7 @@ main:
     strhi r5,[r2],#4
     ldrhi r5,[r1],#4
 
-    subs r3,r3,#1
+    subs r3,r3,#1 
     bne main
 
 /* Note:
